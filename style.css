@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    height: auto;
+    padding: 50px;
+    width: 100%;
+
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+
+}
+
+.div_img {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    display: block;
+    height: 50%;
+    object-fit: cover;
+    width: 50%;
+    animation: abajo 5s ease-in;
+    border-radius: 10px;
+}
+
+.titles {
+    width: 90%;
+    padding: 10px;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.titles h1 {
+    font-size: 60px;
+    animation: moverIzquierda 3s ease-in;
+    display: inline-block;
+
+}
+
+.titles h2 {
+    font-size: 30px;
+    animation: moverDerecha 2s ease-in;
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.titles a {
+    display: inline-block;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    border: 1px solid white;
+    width: 65%;
+    border-radius: 5px;
+    padding: 10px 0;
+    animation: abajo 3s ease-in;
+    background: black;
+}
+
+.wave {
+    height: 150px;
+    width: 100%;
+
+    background: #232526;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+@keyframes moverIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes abajo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    header.container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    header.container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .titles {
+        width: 98%;
+        padding: 5px;
+        color: white;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titles h1 {
+        font-size: 35px;
+        animation: moverIzquierda 3s ease-in;
+        display: inline-block;
+
+    }
+
+    .titles h2 {
+        font-size: 15px;
+        animation: moverDerecha 2s ease-in;
+        display: inline-block;
+        margin-top: 2%;
+    }
+
+    .titles a {
+        display: inline-block;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-top: 5px;
+        border: 1px solid white;
+        width: 95%;
+        border-radius: 5px;
+        padding: 5px 0;
+        animation: abajo 3s ease-in;
+        background: black;
+    }
+
+    header img {
+        width: 98%;
+        height: 98%;
+    }
+}
+
+@media screen and (max-width:200px) {
+
+    header.container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    header.titles {
+        width: 100%;
+        padding: 3px;
+        color: white;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titles h1 {
+        font-size: 20px;
+        animation: moverIzquierda 3s ease-in;
+        display: inline-block;
+
+    }
+
+    .titles h2 {
+        font-size: 10px;
+        animation: moverDerecha 2s ease-in;
+        display: inline-block;
+        margin-top: 2%;
+    }
+
+    .titles a {
+        display: inline-block;
+        color: white;
+        font-weight: 300;
+        text-decoration: none;
+        margin-top: 2px;
+        border: 1px solid white;
+        width: 99%;
+        border-radius: 5px;
+        padding: 2px 0;
+        animation: abajo 3s ease-in;
+        background: black;
+    }
+
+    header img {
+        width: 99%;
+        height: 99%;
+    }
+}
